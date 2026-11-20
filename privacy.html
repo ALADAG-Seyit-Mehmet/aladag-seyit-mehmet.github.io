@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gizlilik Politikası / Privacy Policy - Graviton Pulse</title>
-  <meta name="description" content="Graviton Pulse gizlilik politikası ve veri işleme bilgilendirmesi (GONI STUDIO).">
+  <title>Gizlilik Politikası / Privacy Policy / Datenschutzerklärung - Graviton Pulse</title>
+  <meta name="description" content="Graviton Pulse gizlilik politikası, uluslararası veri koruma bilgilendirmesi ve üçüncü taraf SDK açıklamaları (GONI STUDIO).">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       background: #f7f7f8;
@@ -16,15 +19,19 @@
     .topbar {
       background: #ffffff;
       border-bottom: 1px solid #e4e4e7;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     .topbar-inner {
-      max-width: 720px;
+      max-width: 820px;
       margin: 0 auto;
       padding: 14px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      flex-wrap: wrap;
     }
     .studio-link {
       font-size: 13px;
@@ -42,7 +49,7 @@
       font-size: 13px;
     }
     .lang-switch a {
-      padding: 4px 12px;
+      padding: 5px 12px;
       color: #3f3f46;
       text-decoration: none;
       background: #ffffff;
@@ -56,7 +63,7 @@
       color: #ffffff;
     }
     main {
-      max-width: 720px;
+      max-width: 820px;
       margin: 28px auto 64px;
       padding: 0 20px;
     }
@@ -81,14 +88,40 @@
     .updated {
       font-size: 13.5px;
       color: #71717a;
-      margin: 0 0 24px;
-      padding-bottom: 18px;
+      margin: 0 0 22px;
+      padding-bottom: 16px;
       border-bottom: 1px solid #f4f4f5;
     }
+    .summary-box {
+      background: #fafafa;
+      border: 1px solid #e4e4e7;
+      border-left: 3px solid #18181b;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin: 0 0 24px;
+      font-size: 14.5px;
+    }
+    .summary-box strong {
+      color: #09090b;
+    }
+    .summary-box p {
+      margin: 0 0 6px;
+    }
+    .summary-box p:last-child {
+      margin-bottom: 0;
+    }
     h2 {
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.4;
-      margin: 26px 0 8px;
+      margin: 30px 0 10px;
+      padding-top: 8px;
+      border-top: 1px solid #f4f4f5;
+      color: #09090b;
+    }
+    h3 {
+      font-size: 15.5px;
+      line-height: 1.4;
+      margin: 20px 0 6px;
       color: #18181b;
     }
     p {
@@ -103,15 +136,45 @@
     li {
       margin-bottom: 6px;
     }
+    .table-wrap {
+      overflow-x: auto;
+      margin: 14px 0 20px;
+      border: 1px solid #e4e4e7;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.8px;
+      line-height: 1.55;
+      min-width: 580px;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid #e4e4e7;
+      color: #3f3f46;
+    }
+    th {
+      background: #fafafa;
+      color: #18181b;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
     a {
       color: #1d4ed8;
       text-decoration: none;
+      word-break: break-word;
     }
     a:hover {
       text-decoration: underline;
     }
     footer {
-      max-width: 720px;
+      max-width: 820px;
       margin: 0 auto 48px;
       padding: 0 20px;
       font-size: 13.5px;
@@ -123,7 +186,10 @@
         padding: 0 12px;
       }
       article {
-        padding: 24px 18px;
+        padding: 24px 16px;
+      }
+      h1 {
+        font-size: 22px;
       }
     }
   </style>
@@ -132,194 +198,819 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="studio-link" href="./">GONI STUDIO</a>
-      <nav class="lang-switch" aria-label="Dil seçimi / Language">
+      <nav class="lang-switch" aria-label="Dil seçimi / Language / Sprache">
         <a href="#tr" id="btn-tr">Türkçe</a>
         <a href="#en" id="btn-en">English</a>
+        <a href="#de" id="btn-de">Deutsch</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- ========================= TURKISH ========================= -->
     <article id="tr" lang="tr">
       <h1>Graviton Pulse Gizlilik Politikası</h1>
-      <p class="updated">Son güncelleme: 5 Kasım 2026</p>
+      <p class="updated">Son güncelleme ve yürürlük tarihi: 20 Kasım 2026</p>
 
       <p>
-        Graviton Pulse, GONI STUDIO tarafından geliştirilen ve Google Play üzerinden sunulan bir mobil oyundur
-        (paket adı: com.gravitonpulse.game). Bu sayfa, oyunu oynarken hangi verilerin nasıl işlendiğini açıkça
-        anlatmak amacıyla hazırlanmıştır.
+        Graviton Pulse, Türkiye'de yerleşik bağımsız mobil oyun geliştiricisi <strong>GONI STUDIO</strong> tarafından
+        geliştirilen ve Google Play üzerinden sunulan bir mobil oyundur (paket adı:
+        <code>com.gravitonpulse.game</code>). Bu Gizlilik Politikası ve Kişisel Verilerin Korunması Aydınlatma Metni;
+        oyunu kullanırken hangi verilerin cihazınızda tutulduğunu, hangi verilerin üçüncü taraf altyapı sağlayıcılarına
+        aktarıldığını, hukuki dayanakları ve bulunduğunuz ülkeye göre sahip olduğunuz yasal hakları açıkça anlatır.
       </p>
 
-      <h2>1. Cihazda Tutulan Oyun Kayıtları</h2>
-      <p>
-        Bölüm ilerlemeniz, en yüksek skorlarınız, açtığınız roket ve iz görünümleri, oyun içi bakiyeniz ve
-        ses/dil ayarlarınız doğrudan kendi telefonunuzun uygulama hafızasında saklanır. GONI STUDIO olarak kendi
-        sunucularımızda oyuncu veritabanı tutmuyoruz; bu nedenle telefonunuzdaki oyun kayıtlarına uzaktan erişimimiz yoktur.
-      </p>
-      <p>
-        Telefonunuzda Android otomatik yedekleme özelliği açıksa, işletim sistemi oyun kayıtlarını kendi Google
-        hesabınıza yedekleyebilir. Oyunu telefonunuzdan kaldırdığınızda veya uygulama verilerini temizlediğinizde
-        cihazdaki tüm kayıtlar silinir.
-      </p>
+      <div class="summary-box">
+        <p><strong>Kısa Özet:</strong></p>
+        <p>&bull; GONI STUDIO kendi sunucularında oyuncu hesabı, veritabanı veya kişisel profil <strong>tutmaz</strong>; oyun kayıtlarınız yalnızca kendi cihazınızda saklanır.</p>
+        <p>&bull; Oyun; reklam gösterimi için <strong>Google AdMob</strong>, isteğe bağlı oturum açma için <strong>Google Play Oyunlar</strong> ve isteğe bağlı uygulama içi satın almalar için <strong>Google Play Faturalandırma</strong> kullanır.</p>
+        <p>&bull; Kişisel verilerinizi para karşılığı satmıyoruz; hassas GPS konumu, kamera, mikrofon, rehber veya üçüncü taraf analitik/sohbet araçları kullanmıyoruz.</p>
+      </div>
 
-      <h2>2. Google Play Oyunlar (Play Games Services)</h2>
-      <p>
-        Oyunu açtığınızda veya oyun içi Ayarlar menüsünden "Play Oyunlar ile Bağlan" seçeneğini kullandığınızda
-        Google Play Oyunlar hesabınızla oturum açabilirsiniz. Giriş ve doğrulama süreci doğrudan Google tarafından
-        yürütülür; oyun içinde yalnızca bağlantı durumu ve oyuncu takma adınız görüntülenir.
-      </p>
-      <p>
-        Oyunu oynamak için Play Oyunlar hesabı bağlamak zorunlu değildir. Otomatik girişi cihazınızdaki Play Oyunlar
-        uygulamasından istediğiniz zaman kapatabilir veya uygulama bağlantısını Google hesabınızdan kaldırabilirsiniz.
-      </p>
+      <h2>1. Veri Sorumlusu ve İletişim</h2>
+      <ul>
+        <li><strong>Veri Sorumlusu / Geliştirici:</strong> GONI STUDIO (Türkiye)</li>
+        <li><strong>Gizlilik ve Başvuru İletişim Noktası (Privacy / Grievance Contact):</strong>
+          <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a></li>
+        <li><strong>Web Sitesi:</strong>
+          <a href="https://aladag-seyit-mehmet.github.io/" rel="noopener noreferrer" target="_blank">https://aladag-seyit-mehmet.github.io/</a></li>
+      </ul>
 
-      <h2>3. Reklamlar (Google AdMob)</h2>
+      <h2>2. Cihazda Tutulan Oyun Kayıtları ve Android Otomatik Yedekleme</h2>
       <p>
-        Graviton Pulse ücretsiz bir oyundur. Oyun içinde isteğe bağlı ödüllü video reklamlar ve oyun sonlarında
-        geçiş reklamları gösterilir. Reklam altyapısı için Google AdMob (Google Mobile Ads SDK) kullanılır.
-      </p>
-      <p>
-        Google AdMob; reklamların gösterilmesi, sıklık sınırının korunması, performans ölçümü ve sahte tıklamaların
-        önlenmesi amacıyla şu bilgileri işleyebilir:
+        Aşağıdaki oyun verileri yalnızca kendi cihazınızın uygulama içi hafızasında (AsyncStorage) saklanır ve
+        GONI STUDIO sunucularına gönderilmez:
       </p>
       <ul>
-        <li>Cihazın Android reklam kimliği (Advertising ID) ve uygulama seti kimliği,</li>
-        <li>Ülke veya şehir düzeyinde yaklaşık bölge tahmini için IP adresi,</li>
-        <li>Cihaz modeli, ekran boyutu, işletim sistemi sürümü, dil ve uygulama sürümü,</li>
-        <li>Görüntülenen veya tıklanan reklamlara ilişkin etkileşim bilgileri ve teknik hata kayıtları.</li>
+        <li>Bölüm ilerlemesi, yıldızlar, en yüksek skorlar ve sonsuz mod istatistikleri,</li>
+        <li>Pilot seviyesi, deneyim puanı (XP), unvanlar, günlük görevler, 7 günlük giriş serisi, başarımlar ve eğitim durumu,</li>
+        <li>Açtığınız roketler, iz görünümleri, yükseltmeler ve oyun içi bakiye (Yıldız Tozu / Mücevher / "Reklamları kaldır" durumu),</li>
+        <li>Ses, titreşim, grafik kalitesi, tema ve dil tercihleri (Türkçe, İngilizce, Almanca) ile günlük ödüllü reklam sayaçları,</li>
+        <li>Satın almaların yeniden oynatılmasını (replay) önlemek ve geri yüklemek amacıyla Google Play'den dönen sipariş kimliği, ürün kimliği, satın alma jetonu ve zaman damgasını içeren yerel satın alma kayıt defteri.</li>
       </ul>
       <p>
-        Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'deki kullanıcılara kişiselleştirilmiş reklamlar gösterilmeden
-        önce Google'ın izin ekranı sunulur. İzin tercihlerinizi oyun içindeki Ayarlar menüsünden veya telefonunuzun
-        Android Ayarlar &gt; Google &gt; Reklamlar bölümünden istediğiniz zaman değiştirebilir, reklam kimliğinizi sıfırlayabilirsiniz.
-      </p>
-      <p>
-        Google'ın veri işleme ilkeleri hakkında ayrıntılı bilgiye
-        <a href="https://policies.google.com/privacy?hl=tr" rel="noopener noreferrer" target="_blank">Google Gizlilik Politikası</a>
-        sayfasından ulaşabilirsiniz.
+        Cihazınızda <strong>Android Otomatik Yedekleme (Auto Backup)</strong> veya cihazdan cihaza veri aktarımı açıksa,
+        Android işletim sistemi uygulama hafızasındaki bu kayıtları kişisel Google Drive hesabınıza yedekleyebilir veya
+        yeni telefonunuza aktarabilir. Bu yedekleme doğrudan cihazınızın işletim sistemi tarafından yönetilir;
+        Android ayarlarınızdan kapatabilirsiniz. Oyunu kaldırdığınızda veya Android Ayarlar &gt; Uygulamalar &gt;
+        Graviton Pulse &gt; Depolama &gt; Verileri Temizle adımlarını izlediğinizde cihazdaki tüm yerel kayıtlar silinir.
       </p>
 
-      <h2>4. Uygulama İçi Satın Almalar</h2>
+      <h2>3. Üçüncü Taraf Hizmetler, SDK'lar ve Dış Veri Aktarım Tablosu</h2>
       <p>
-        Oyun içinde sunulan satın alma işlemleri tamamen Google Play faturalandırma altyapısı üzerinden gerçekleşir.
-        Kredi kartı, banka kartı veya fatura bilgileriniz tarafımızca görülmez ve kaydedilmez. Uygulama yalnızca
-        satın alınan içeriği tanımlamak ve gerektiğinde geri yüklemek için Google Play'in döndürdüğü sipariş durumunu
-        cihazda doğrular.
+        Graviton Pulse; reklam sunumu, isteğe bağlı oyuncu oturumu ve uygulama içi satın alma işlemleri için yalnızca
+        aşağıdaki resmi Google servislerini ve SDK'larını kullanır. Üçüncü taraf davranışsal analitik (ör. Firebase
+        Analytics), sosyal medya izleyicisi, sohbet, anlık bildirim veya hassas konum (GPS) servisi <strong>kullanılmaz</strong>.
       </p>
 
-      <h2>5. Çocukların Gizliliği</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Hizmet / SDK</th>
+              <th>Alıcı ve Ülke</th>
+              <th>İşlenen / İletilen Veriler</th>
+              <th>Kullanım Amacı ve Yöntem</th>
+              <th>Saklama ve Politika</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google AdMob</strong><br>(Google Mobile Ads SDK &amp; Google UMP SDK)</td>
+              <td>Google LLC (ABD), Google Ireland Ltd. (İrlanda) ve Google reklam teknolojisi ortakları</td>
+              <td>Android Reklam Kimliği (AAID), App Set ID, yaklaşık konum tahmini için IP adresi, cihaz modeli/ekran/OS/dil/uygulama sürümü, reklam görüntüleme ve tıklama etkileşimleri, SDK çökme/tanılama kayıtları ve Android desteklediğinde Privacy Sandbox sinyalleri (Topics / Attribution).</td>
+              <td>İsteğe bağlı ödüllü video ve oyun arası geçiş reklamlarının sunulması, sıklık sınırı, ölçüm, geçersiz trafik/sahtecilik önleme ve rıza/gizlilik tercihlerinin yönetimi. Uygulama ve reklam yüklemesi sırasında HTTPS/TLS ile iletilir.</td>
+              <td>Google saklama politikalarına tabidir.<br>
+                <a href="https://policies.google.com/privacy?hl=tr" rel="noopener noreferrer" target="_blank">Google Gizlilik</a> &bull;
+                <a href="https://policies.google.com/technologies/partner-sites?hl=tr" rel="noopener noreferrer" target="_blank">Google İş Ortakları</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Play Oyunlar</strong><br>(Play Games Services v2)</td>
+              <td>Google LLC (ABD) ve Google Ireland Ltd. (İrlanda)</td>
+              <td>Google Play Oyunlar oturum doğrulama durumu ve oyuncu görünen adı (takma ad). Oyun bu bilgileri yalnızca Ayarlar ekranında bağlantı durumunu göstermek için cihazda okur; harici sunucuya kaydetmez.</td>
+              <td>İsteğe bağlı oyuncu profili bağlantısı. Oynamak için zorunlu değildir. Açılışta veya Ayarlar üzerinden manuel girişte HTTPS/TLS ile işlenir.</td>
+              <td>Google hesap ayarlarınızdan bağlantıyı dilediğiniz zaman kaldırabilirsiniz.<br>
+                <a href="https://policies.google.com/privacy?hl=tr" rel="noopener noreferrer" target="_blank">Google Gizlilik</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Play Faturalandırma</strong><br>(Google Play Billing / expo-iap)</td>
+              <td>Google LLC (ABD) ve Google Ireland Ltd. (İrlanda)</td>
+              <td>Satın alınan ürün kimliği, sipariş kimliği, satın alma durumu/jetonu ve işlem zamanı. Kredi kartı, banka veya fatura bilgileri yalnızca Google Play tarafından işlenir; GONI STUDIO tarafından görülmez ve saklanmaz.</td>
+              <td>Sabit içerikli sanal para paketleri (Yıldız Tozu, Mücevher) ve kalıcı "Reklamları kaldır" hakkının teslimi, sahtecilik önleme ve yeni cihazda geri yükleme. (Oyunda şansa dayalı kutu / loot box yoktur.)</td>
+              <td>Google Play işlem kayıtlarına ve cihazdaki yerel deftere tabidir.<br>
+                <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice&ldl=tr" rel="noopener noreferrer" target="_blank">Google Payments Gizlilik</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Reklam Tercihleri, Rıza Yönetimi ve Cihaz Kontrolleri</h2>
       <p>
-        Graviton Pulse genel oyuncu kitlesine yöneliktir ve 13 yaşın altındaki çocukları hedeflemez. 13 yaş altındaki
-        bireylerden bilerek kişisel veri toplamıyoruz. Bir çocuğa ait kişisel bilginin paylaşıldığını düşünüyorsanız
-        aşağıdaki e-posta adresinden bize ulaşabilirsiniz.
+        Graviton Pulse ücretsiz bir oyundur; oyun içi isteğe bağlı ödüllü video reklamlar (yeniden canlanma, 2× Yıldız
+        Tozu, ücretsiz Yıldız Tozu) ve belirli aralıklarla oyun arası geçiş reklamları gösterir. "Reklamları kaldır"
+        satın alımı oyun arası geçiş reklamlarını kalıcı olarak kapatır; isteğe bağlı ödüllü videolar oyuncunun
+        tercihine bağlı olarak kullanılabilir kalır.
+      </p>
+      <p>
+        Uygulama, <strong>Google User Messaging Platform (UMP) SDK</strong> kullanır:
+      </p>
+      <ul>
+        <li><strong>AEA, Birleşik Krallık ve İsviçre:</strong> Kişiselleştirilmiş reklamlar gösterilmeden ve reklam amaçlı cihaz kimliklerine erişilmeden önce Google sertifikalı IAB TCF v2 rıza ekranı sunulur.</li>
+        <li><strong>ABD Eyaletleri:</strong> Geçerli ABD eyalet gizlilik düzenlemelerinin uygulandığı bölgelerde, hedefli reklamcılık / veri paylaşımından çıkış (opt-out) seçenekleri desteklenir.</li>
+        <li><strong>Tercihleri Değiştirme:</strong> UMP kapsamındaki bölgelerde oyun içi <em>Ayarlar &gt; Reklam gizlilik seçenekleri</em> menüsünden kararınızı istediğiniz zaman güncelleyebilirsiniz.</li>
+        <li><strong>Cihaz ve Google Hesap Ayarları:</strong> Tüm bölgelerde Android <em>Ayarlar &gt; Google &gt; Reklamlar</em> menüsünden Reklam Kimliğinizi sıfırlayabilir veya tamamen silebilir, ayrıca
+          <a href="https://myadcenter.google.com/" rel="noopener noreferrer" target="_blank">Google Reklam Merkezim</a>
+          üzerinden kişiselleştirmeyi kapatabilirsiniz.</li>
+      </ul>
+
+      <h2>5. Kişisel Verilerin İşlenmesinin Hukuki Sebepleri</h2>
+      <p>
+        Bulunduğunuz yargı yetkisine (6698 sayılı KVKK Md. 5, AB/Birleşik Krallık GDPR Md. 6, Almanya TDDDG § 25,
+        Brezilya LGPD Md. 7 vb.) göre veriler aşağıdaki hukuki sebeplere dayanarak işlenir:
+      </p>
+      <ul>
+        <li><strong>Açık Rıza (KVKK Md. 5/1, GDPR Md. 6(1)(a), Almanya TDDDG § 25(1)):</strong> Geçerli mevzuatın rıza aradığı hallerde kişiselleştirilmiş reklam gösterimi ve reklam amaçlı cihaz tanımlayıcılarına (AAID) erişim.</li>
+        <li><strong>Sözleşmenin İfası (KVKK Md. 5/2-c, GDPR Md. 6(1)(b)):</strong> Temel oyun işlevlerinin sunulması, talep ettiğiniz uygulama içi satın almaların teslimi/geri yüklenmesi ve kendi isteğinizle bağladığınız Google Play Oyunlar oturumunun gösterilmesi.</li>
+        <li><strong>Meşru Menfaat (KVKK Md. 5/2-f, GDPR Md. 6(1)(f)):</strong> Hukuken izin verilen yerlerde kişiselleştirilmemiş/bağlamsal reklam gösterimi, reklam sıklık sınırlaması, geçersiz tıklama/sahtecilik önleme, uygulama güvenliği ve SDK hata tanılaması.</li>
+        <li><strong>Hukuki Yükümlülük (KVKK Md. 5/2-ç, GDPR Md. 6(1)(c)):</strong> Geçerli tüketici, vergi veya yetkili merci taleplerinin yerine getirilmesi.</li>
+      </ul>
+
+      <h2>6. Uluslararası Veri Aktarımları</h2>
+      <p>
+        GONI STUDIO Türkiye'de yerleşiktir ve kendi uzak sunucularında oyuncu verisi tutmaz. Ancak oyunda entegre
+        edilen Google hizmetleri (AdMob, Play Oyunlar, Play Faturalandırma), yukarıdaki tabloda belirtilen verileri
+        Google'ın küresel altyapısı kapsamında <strong>Amerika Birleşik Devletleri, Avrupa Birliği/AEA, Singapur</strong>
+        ve Google veri merkezlerinin bulunduğu diğer ülkelere şifreli (HTTPS/TLS) olarak aktarabilir ve işleyebilir.
+      </p>
+      <p>
+        Bu uluslararası aktarımlar; AB-ABD / Birleşik Krallık-ABD / İsviçre-ABD Veri Gizliliği Çerçevesi (DPF),
+        Standart Sözleşme Maddeleri (AB SCC, Birleşik Krallık IDTA/Addendum, Brezilya ANPD SCC) ve Türkiye KVKK
+        2024 değişikliği kapsamındaki Madde 9(4) uygun güvenceleri dahil olmak üzere ilgili mevzuatın öngördüğü
+        koruma mekanizmaları çerçevesinde gerçekleştirilir. Yurt dışında işlenen veriler, işlendiği ülkenin yerel
+        yasaları uyarınca yetkili mahkeme veya kamu makamlarının yasal erişimine tabi olabilir.
       </p>
 
-      <h2>6. Veri Saklama, Silme ve Haklarınız</h2>
+      <h2>7. Veri Saklama Süresi, Güvenlik ve Silme</h2>
       <p>
-        Kendi sunucularımızda kullanıcı hesabı veya kişisel veri saklamadığımız için tarafımızda silinecek harici bir
-        kayıt bulunmaz. Cihazdaki verileri uygulamayı silerek temizleyebilir; Google Play Oyunlar ve reklam tercihlerinizi
-        ise doğrudan Google hesap ayarlarınızdan yönetebilirsiniz.
+        Tüm dış ağ iletişimi HTTPS/TLS şifrelemesi ile korunur. GONI STUDIO sunucularında hesap veya oyuncu verisi
+        bulunmadığı için tarafımızda saklanan bir oyun profili yoktur:
       </p>
+      <ul>
+        <li><strong>Cihazdaki oyun verileri:</strong> Oyunu kaldırarak veya Android uygulama verilerini temizleyerek anında silebilirsiniz (Google Drive yedeğiniz varsa Android yedekleme ayarlarından da temizleyebilirsiniz).</li>
+        <li><strong>Destek e-postaları:</strong> Bize e-posta gönderdiğinizde iletiniz yalnızca talebinizi yanıtlamak ve yasal yükümlülükleri yerine getirmek için gereken süre boyunca saklanır; talep ettiğinizde silinir.</li>
+        <li><strong>Google verileri:</strong> Google AdMob, Play Oyunlar ve Google Play tarafından işlenen verilerin saklama süreleri Google'ın politikalarına tabidir; Google Hesabınızdan ve cihaz reklam ayarlarınızdan yönetilebilir.</li>
+      </ul>
+
+      <h2>8. Çocukların Gizliliği ve Ülkelere Göre Yaş Sınırları</h2>
       <p>
-        6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve geçerli veri koruma mevzuatı kapsamındaki soru ve
-        başvurularınız için bizimle iletişime geçebilirsiniz.
+        Graviton Pulse genel oyuncu kitlesine (13+) yöneliktir ve <strong>çocukları hedeflemez</strong>. Geçerli
+        yasal ebeveyn/vasi rızası olmaksızın aşağıdaki yaş eşiklerinin altındaki bireylerden bilerek kişisel veri
+        toplamıyoruz:
+      </p>
+      <ul>
+        <li><strong>ABD (COPPA):</strong> 13 yaş altı.</li>
+        <li><strong>Avrupa Birliği / AEA (GDPR Md. 8):</strong> Üye devlete göre <strong>13 ila 16 yaş</strong> arası (ör. Almanya ve Hollanda'da 16; Fransa'da 15; İtalya ve İspanya'da 14; Polonya, İsveç ve Danimarka'da 13).</li>
+        <li><strong>Birleşik Krallık:</strong> 13 yaş altı (18 yaş altı için yaşa uygun gizlilik ilkeleri gözetilir).</li>
+        <li><strong>Güney Kore ve Kanada (Quebec):</strong> 14 yaş altı.</li>
+        <li><strong>Türkiye ve Brezilya:</strong> Türkiye 5651/7578 sayılı Kanun kapsamındaki 15–18 yaş koruma düzenlemeleri ile Brezilya Dijital ECA (15.211/2025 sayılı Kanun) kapsamındaki 16 yaş altı ebeveyn koruma kurallarına saygı gösterilir.</li>
+        <li><strong>Hindistan (DPDP Kanunu):</strong> 18 yaş altı bireyler çocuk sayılır; Hindistan'da doğrulanabilir ebeveyn rızası olmaksızın 18 yaş altına bilerek davranışsal reklam hedeflemesi yapmıyoruz.</li>
+      </ul>
+      <p>
+        Bir çocuğun geçerli yasal yaş sınırının altında olduğu halde bu oyun aracılığıyla kişisel veri paylaştığını
+        düşünüyorsanız lütfen derhal <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>
+        adresinden bize ulaşın; gerekli inceleme ve yönlendirmeyi en kısa sürede yapalım.
       </p>
 
-      <h2>7. İletişim ve Değişiklikler</h2>
+      <h2>9. Ülke ve Bölge Bazlı Gizlilik Haklarınız</h2>
+
+      <h3>9.1 Türkiye (6698 Sayılı KVKK)</h3>
       <p>
-        Bu politikada zaman içinde yapılacak güncellemeler bu sayfada yayımlanır. Her türlü soru ve talebiniz için
-        e-posta adresimiz:
+        KVKK Madde 11 kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme,
+        işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı
+        üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, KVKK Md. 7 şartları çerçevesinde
+        silinmesini/yok edilmesini talep etme, aktarılan üçüncü kişilere bildirilmesini isteme, münhasıran otomatik
+        sistemlerle analiz sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işleme sebebiyle
+        zarara uğramanız halinde zararın giderilmesini talep etme haklarına sahipsiniz. Başvurularınızı
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a> adresine iletebilirsiniz;
+        talepleriniz en geç <strong>30 gün</strong> içinde ücretsiz olarak yanıtlanır. Ayrıca Kişisel Verileri Koruma
+        Kurumu'na (KVKK) şikâyette bulunma hakkınız saklıdır.
+      </p>
+
+      <h3>9.2 Avrupa Ekonomik Alanı (AEA), Birleşik Krallık ve İsviçre (GDPR, UK GDPR, DUAA 2025, TDDDG § 25, revFADP)</h3>
+      <p>
+        AEA, Birleşik Krallık ve İsviçre'deki kullanıcılar; kişisel verilerine erişim, düzeltme, silme ("unutulma
+        hakkı"), işlemeyi kısıtlama, veri taşınabilirliği, meşru menfaate dayalı işlemeye itiraz etme ve verdikleri
+        rızayı (önceki işlemenin hukuka uygunluğunu etkilemeden) diledikleri zaman geri çekme haklarına sahiptir.
+        Oyun, üzerinizde hukuki veya benzeri önemli etki doğuran münhasıran otomatik karar alma süreçleri yürütmez.
+        Almanya'daki kullanıcılar için cihaz depolama ve reklam kimliği erişimi <strong>TDDDG § 25</strong> uyarınca
+        önceden rızaya tabidir. Yerel veri koruma denetim otoritenize (AB ulusal otoriteleri, Almanya eyalet veri
+        koruma makamları, Birleşik Krallık'ta <strong>ICO</strong>, İsviçre'de <strong>FDPIC</strong>) şikâyet
+        başvurusunda bulunma hakkınız vardır.
+      </p>
+
+      <h3>9.3 Amerika Birleşik Devletleri (Kaliforniya CCPA/CPRA ve Diğer Eyalet Gizlilik Yasaları)</h3>
+      <p>
+        Kaliforniya (CCPA/CPRA), Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), Teksas (TDPSA),
+        Oregon (OCPA), Montana, Florida, Delaware, Iowa, Nebraska, New Hampshire, New Jersey, Tennessee, Minnesota,
+        Maryland, Indiana, Kentucky, Rhode Island ve benzeri kapsamlı eyalet gizlilik yasalarına tabi ABD sakinleri
+        için ek bilgilendirme:
+      </p>
+      <ul>
+        <li><strong>Son 12 ayda işlenen kategoriler (Google SDK'ları aracılığıyla):</strong> Tanımlayıcılar (Reklam Kimliği, App Set ID, IP adresi), internet/ağ etkinliği (reklam etkileşimleri ve tanılama), yaklaşık konum (IP kaynaklı ülke/şehir) ve ticari bilgiler (yalnızca Google Play üzerinden IAP yapıldığında sipariş durumu). Hassas kişisel veri (Sensitive Personal Information) toplanmaz.</li>
+        <li><strong>Satış / Paylaşım ve Hedefli Reklam:</strong> Kişisel verilerinizi para karşılığı satmıyoruz. Ancak Google AdMob üzerinden kişiselleştirilmiş reklam gösterimi bazı eyalet yasalarında "paylaşım" (sharing) veya "hedefli reklamcılık" (targeted advertising) kapsamında değerlendirilebilir. Bunu oyun içi <em>Reklam gizlilik seçenekleri</em> (sunulduğu bölgelerde), Android Reklam Kimliği silme/kişiselleştirmeyi kapatma ayarları veya bize e-posta göndererek reddedebilirsiniz.</li>
+        <li><strong>Haklarınız:</strong> Bilme/erişim, silme, düzeltme, veri taşınabilirliği, hedefli reklamcılıktan/paylaşımdan çıkış (opt-out), haklarınızı kullandığınız için ayrımcılığa uğramama, yetkili temsilci aracılığıyla başvuru yapma ve reddedilen bir talebe karşı itiraz etme (appeal) hakkınız vardır. CalOPPA kapsamında oyunumuz tarayıcı tabanlı "Do Not Track" sinyallerini doğrudan işlemez; ancak Android cihaz seviyesi reklam gizlilik ayarlarına ve UMP/GPP sinyallerine saygı gösterir.</li>
+      </ul>
+
+      <h3>9.4 Brezilya (LGPD — 13.709/2018 Sayılı Kanun ve ANPD Karar 19/2024)</h3>
+      <p>
+        Brezilya'daki kullanıcılar LGPD Madde 18 uyarınca; veri işlemenin varlığını doğrulama, verilere erişim,
+        düzeltme, gereksiz verilerin anonimleştirilmesi/engellenmesi/silinmesi, veri taşınabilirliği, rızaya dayalı
+        verilerin silinmesi, verilerin paylaşıldığı kurumlar hakkında bilgi alma, rıza vermeme seçeneği ve sonuçları
+        hakkında bilgilendirilme ile rızayı geri alma haklarına sahiptir. Uluslararası aktarımlar ANPD Karar 19/2024
+        uyarınca uygun güvencelere tabidir. Ulusal Veri Koruma Kurumu'na (<strong>ANPD</strong>) başvurma hakkınız saklıdır.
+      </p>
+
+      <h3>9.5 Kanada (PIPEDA ve Quebec Kanun 25)</h3>
+      <p>
+        Kanada ve Quebec sakinleri; kişisel verilerine erişim, düzeltme, rızayı geri çekme ve uygulanabildiği ölçüde
+        veri taşınabilirliği haklarına sahiptir. Quebec Kanun 25 uyarınca:
+      </p>
+      <ul>
+        <li><strong>Gizlilik Sorumlusu (Privacy Officer):</strong> GONI STUDIO —
+          <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a></li>
+        <li><strong>Tanımlama ve Profilleme Teknolojisi:</strong> Oyun, reklam sunumu için cihaz tanımlayıcıları kullanabilen Google AdMob SDK'sını içerir; Bölüm 4'te açıklanan Android reklam ayarları üzerinden kişiselleştirmeyi kapatabilir veya Reklam Kimliğinizi silebilirsiniz.</li>
+        <li>Verileriniz Kanada/Quebec dışında (ör. ABD) işlenebilir ve o ülkenin yasalarına tabi olabilir. Federal <strong>OPC</strong> veya Quebec <strong>CAI</strong> kurumlarına başvurma hakkınız saklıdır.</li>
+      </ul>
+
+      <h3>9.6 Güney Kore (PIPA)</h3>
+      <p>
+        Güney Kore Kişisel Bilgilerin Korunması Kanunu (PIPA) Madde 28-8 uyarınca yurt dışına veri aktarımına ilişkin
+        zorunlu bilgiler (aktarılan öğeler, hedef ülkeler, alıcı Google LLC, aktarım zamanı/yöntemi, amaç ve saklama
+        süresi) <strong>Bölüm 3 tablosunda ve Bölüm 6'da</strong> ayrıntılı olarak belirtilmiştir. Yurt dışı aktarımı
+        reddetmek isterseniz Android ayarlarından Reklam Kimliğinizi silebilir/kişiselleştirmeyi kapatabilir, Play
+        Oyunlar bağlantısını kesebilir veya uygulamayı kaldırabilirsiniz (AdMob aktarımının tamamen reddedilmesi reklam
+        destekli özelliklerin kullanımını sınırlayabilir). PIPA kapsamında erişim, düzeltme, silme, işlemeyi durdurma
+        haklarınız için Gizlilik İletişim Noktamıza (<a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>)
+        veya <strong>PIPC / KISA</strong> makamlarına başvurabilirsiniz.
+      </p>
+
+      <h3>9.7 Japonya (APPI ve Telekomünikasyon İşletmeciliği Kanunu Md. 27-12)</h3>
+      <p>
+        Japonya Telekomünikasyon İşletmeciliği Kanunu Madde 27-12 ("External Transmission Policy" / Dış Aktarım
+        Kuralı) kapsamında üçüncü taraf SDK'lar (Google AdMob, Play Oyunlar, Play Faturalandırma) aracılığıyla dışarıya
+        gönderilen veriler, alıcı şirketler ve amaçlar <strong>Bölüm 3'teki tabloda</strong> şeffaf biçimde
+        açıklanmıştır. APPI kapsamında "Kişisel Olarak İlişkilendirilebilir Bilgiler" (ör. Reklam Kimliği) dahil
+        verilerinize ilişkin açıklama, düzeltme, kullanımın durdurulması veya üçüncü tarafa aktarımın sonlandırılması
+        talepleriniz için bizimle iletişime geçebilirsiniz.
+      </p>
+
+      <h3>9.8 Hindistan (DPDP Kanunu 2023 ve DPDP Kuralları)</h3>
+      <p>
+        Hindistan'daki kullanıcılar (Veri Sahipleri / Data Principals); işlenen kişisel verilerin özetine erişme,
+        düzeltme/güncelleme, silme talep etme, verdikleri rızayı geri çekme, haklarını kullanmak üzere başka bir
+        bireyi aday gösterme (nomination) ve şikâyet çözümü talep etme haklarına sahiptir. Şikâyet ve gizlilik
+        talepleriniz için Şikâyet İletişim Noktamız (Grievance Contact):
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>. Ayrıca Hindistan Veri
+        Koruma Kurulu'na (<strong>DPBI</strong>) başvurma hakkınız saklıdır.
+      </p>
+
+      <h3>9.9 Avustralya ve Yeni Zelanda</h3>
+      <p>
+        Avustralya <em>Privacy Act 1988</em> (Avustralya Gizlilik İlkeleri — APP 8 yurt dışı aktarım bildirimi dahil)
+        ve Yeni Zelanda <em>Privacy Act 2020</em> kapsamında; Google hizmetleri aracılığıyla verilerinizin ABD, AB ve
+        diğer ülkelerdeki sunucularda işlenebileceğini bildiririz. Erişim, düzeltme veya gizlilik şikâyetleriniz için
+        öncelikle bizimle iletişime geçebilir, yanıtımızdan memnun kalmazsanız <strong>OAIC</strong> (Avustralya) veya
+        <strong>OPC</strong> (Yeni Zelanda) makamlarına başvurabilirsiniz.
+      </p>
+
+      <h3>9.10 Diğer Ülkeler (Singapur PDPA, Suudi Arabistan ve BAE PDPL, Endonezya PDP, Güney Afrika POPIA, Latin Amerika ARCO Hakları, Hong Kong ve Tayvan)</h3>
+      <p>
+        Singapur, Suudi Arabistan, Birleşik Arap Emirlikleri, Endonezya, Güney Afrika, Meksika, Arjantin, Hong Kong,
+        Tayvan ve diğer tüm ülkelerdeki oyuncularımızın yerel veri koruma yasaları kapsamındaki bilgi alma, erişim,
+        düzeltme, silme, itiraz, rızayı geri çekme ve şikâyet haklarına saygı duyuyoruz. Bu haklarınızı kullanmak
+        için her zaman aşağıdaki adresten bizimle iletişime geçebilirsiniz.
+      </p>
+
+      <h2>10. Politika Değişiklikleri ve İletişim</h2>
+      <p>
+        Bu Gizlilik Politikası yasal düzenlemeler veya oyundaki teknik güncellemeler doğrultusunda zaman zaman
+        güncellenebilir. Güncel metin ve yürürlük tarihi her zaman bu sayfada yayımlanır. Her türlü gizlilik sorusu,
+        veri sahibi başvurusu veya şikâyetiniz için:
+      </p>
+      <p>
+        <strong>GONI STUDIO</strong> &mdash;
         <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>
       </p>
     </article>
 
+    <!-- ========================= ENGLISH ========================= -->
     <article id="en" lang="en">
       <h1>Graviton Pulse Privacy Policy</h1>
-      <p class="updated">Last updated: November 5, 2026</p>
+      <p class="updated">Last updated and effective date: November 20, 2026</p>
 
       <p>
-        Graviton Pulse is a mobile game developed and published on Google Play by GONI STUDIO
-        (package name: com.gravitonpulse.game). This page explains what data is handled when you play the game.
+        Graviton Pulse is a mobile game developed and published on Google Play by <strong>GONI STUDIO</strong>, an
+        independent developer based in Turkey (package name: <code>com.gravitonpulse.game</code>). This Privacy Policy
+        explains what data is stored on your device, what data is transmitted through integrated third-party services,
+        our legal bases for processing, and your privacy rights across jurisdictions worldwide.
       </p>
 
-      <h2>1. Local Game Data</h2>
-      <p>
-        Your level progress, high scores, unlocked ships and trails, in-game currency balances, and audio or language
-        preferences are stored locally on your device. GONI STUDIO does not run custom backend servers or player
-        databases, so we have no remote access to your local save files.
-      </p>
-      <p>
-        If Android Auto Backup is enabled on your phone, Android may back up app data to your personal Google Drive
-        account so your progress can be restored if you switch devices. Uninstalling the game or clearing its storage
-        in Android settings removes local data from your device.
-      </p>
+      <div class="summary-box">
+        <p><strong>At a Glance:</strong></p>
+        <p>&bull; GONI STUDIO does <strong>not</strong> operate custom backend servers, player databases, or in-game user accounts; your game saves stay locally on your device.</p>
+        <p>&bull; The game uses <strong>Google AdMob</strong> for ads, optional <strong>Google Play Games Services</strong> for sign-in, and <strong>Google Play Billing</strong> for optional in-app purchases.</p>
+        <p>&bull; We do not sell personal data for money, and we do not collect precise GPS location, camera, microphone, contacts, chat, or third-party behavioral analytics.</p>
+      </div>
 
-      <h2>2. Google Play Games Services</h2>
-      <p>
-        You may sign in with Google Play Games automatically on launch or manually via the "Sign in with Play Games"
-        button in the in-game Settings menu. Authentication is handled directly by Google, and the game only reads
-        your sign-in status and Play Games gamer display name to show whether your profile is connected.
-      </p>
-      <p>
-        Signing in is optional and not required to play. You can disable automatic sign-in or disconnect the game
-        at any time in the Google Play Games app or your Google Account settings.
-      </p>
+      <h2>1. Data Controller and Privacy Contact</h2>
+      <ul>
+        <li><strong>Data Controller / Developer:</strong> GONI STUDIO (Turkey)</li>
+        <li><strong>Privacy Officer / Grievance Contact:</strong>
+          <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a></li>
+        <li><strong>Website:</strong>
+          <a href="https://aladag-seyit-mehmet.github.io/" rel="noopener noreferrer" target="_blank">https://aladag-seyit-mehmet.github.io/</a></li>
+      </ul>
 
-      <h2>3. Advertising (Google AdMob)</h2>
+      <h2>2. Local Game Data and Android Auto Backup</h2>
       <p>
-        Graviton Pulse is free to play and displays optional rewarded video ads as well as occasional interstitial ads
-        between runs. Ads are served through Google AdMob (Google Mobile Ads SDK).
-      </p>
-      <p>
-        To deliver ads, limit ad frequency, measure performance, and detect invalid traffic, Google AdMob may collect
-        and process:
+        The following gameplay data is stored strictly on your device in app-private storage (AsyncStorage) and is
+        never uploaded to servers owned by GONI STUDIO:
       </p>
       <ul>
-        <li>Your Android Advertising ID and app set ID,</li>
-        <li>IP address (used to determine approximate country or region),</li>
-        <li>Device make and model, operating system version, language, and app version,</li>
-        <li>Ad view and click events, along with SDK crash or diagnostic logs.</li>
+        <li>Chapter progress, star ratings, high scores, and endless-mode records,</li>
+        <li>Pilot level, XP, titles, daily missions, 7-day login streak, achievements, and tutorial state,</li>
+        <li>Unlocked rockets and engine trails, upgrades, and in-game balances (Stardust, Gems, and "Remove Ads" entitlement),</li>
+        <li>Audio, vibration, graphics quality, theme, and language preferences (English, Turkish, German), plus daily rewarded-ad cap counters,</li>
+        <li>A local purchase anti-replay ledger containing Google Play order IDs, product IDs, purchase tokens, and timestamps used strictly to verify and restore your purchases on-device.</li>
       </ul>
       <p>
-        Players in the European Economic Area, the United Kingdom, and Switzerland are shown Google's consent prompt
-        before personalized ads are requested. You can review or update your ad consent choices in the game's Settings
-        menu, and you can reset or delete your Advertising ID at any time in your device's Android privacy settings.
-      </p>
-      <p>
-        For details on how Google handles data, please review the
-        <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>.
+        If <strong>Android Auto Backup</strong> or device-to-device transfer is enabled on your phone, Android may back
+        up app data to your personal Google Drive account so progress transfers when you change devices. You can turn
+        off backup in your Android settings. Uninstalling Graviton Pulse or clearing its storage in Android Settings
+        deletes all local data from your device.
       </p>
 
-      <h2>4. In-App Purchases</h2>
+      <h2>3. Third-Party Services, SDKs, and External Data Transmission</h2>
       <p>
-        When in-app purchases are offered, transactions are processed directly by Google Play Billing. We never receive
-        or store your credit card or billing details. The game only checks the purchase receipt status provided by
-        Google Play on your device to unlock or restore purchased items.
+        Graviton Pulse integrates only the official Google services listed below. We do <strong>not</strong> include
+        third-party analytics SDKs (such as Firebase Analytics), social media trackers, text chat, push notifications, or
+        precise location tracking.
       </p>
 
-      <h2>5. Children's Privacy</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Service / SDK</th>
+              <th>Recipient &amp; Region</th>
+              <th>Data Processed / Transmitted</th>
+              <th>Purpose &amp; Transmission Method</th>
+              <th>Retention &amp; Policy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google AdMob</strong><br>(Google Mobile Ads SDK &amp; Google UMP SDK)</td>
+              <td>Google LLC (USA), Google Ireland Ltd. (Ireland), and Google's ad technology partners</td>
+              <td>Android Advertising ID (AAID), App Set ID, IP address (for approximate country/region), device make/model/OS/screen/language/app version, ad views and clicks, SDK crash/diagnostic logs, and Android Privacy Sandbox signals (Topics / Attribution) where supported by Android.</td>
+              <td>Serving optional rewarded video ads and capped interstitial ads, frequency capping, ad measurement, invalid traffic/fraud prevention, and consent/opt-out management. Transmitted via encrypted HTTPS/TLS during app use and ad loading.</td>
+              <td>Governed by Google's retention policies.<br>
+                <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a> &bull;
+                <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">Google Partner Sites</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Play Games Services</strong><br>(v2 SDK)</td>
+              <td>Google LLC (USA) and Google Ireland Ltd. (Ireland)</td>
+              <td>Play Games sign-in status and gamer display name. The app only reads these on-device to show whether your profile is connected in Settings and does not send them to external servers.</td>
+              <td>Optional player profile sign-in; not required to play. Processed over encrypted HTTPS/TLS during automatic or manual sign-in.</td>
+              <td>Manage or disconnect anytime in Google Play Games or Google Account settings.<br>
+                <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Play Billing</strong><br>(In-App Purchases via expo-iap)</td>
+              <td>Google LLC (USA) and Google Ireland Ltd. (Ireland)</td>
+              <td>Product ID, Google Play order ID, purchase status/token, and transaction timestamp. Payment card and billing details are processed exclusively by Google Play and are never seen or stored by GONI STUDIO.</td>
+              <td>Fulfilling fixed virtual currency packs (Stardust, Gems) and the one-time "Remove Ads" entitlement, preventing replay fraud, and restoring purchases. (The game has no loot boxes or randomized paid items.)</td>
+              <td>Subject to Google Play transaction records and your local on-device ledger.<br>
+                <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice&ldl=en" rel="noopener noreferrer" target="_blank">Google Payments Privacy</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Advertising Controls, Consent, and Device Privacy Options</h2>
       <p>
-        Graviton Pulse is intended for a general audience and is not directed at children under the age of 13.
-        We do not knowingly collect personal information from children under 13. If you believe a child has submitted
-        personal information to us, please reach out by email so we can assist.
+        Graviton Pulse is free to play and displays optional rewarded video ads (revive, 2× Stardust, free Stardust)
+        and capped interstitial ads between runs. Purchasing "Remove Ads" permanently disables interstitial ads between
+        runs while keeping optional rewarded videos available if you choose to watch them.
+      </p>
+      <p>
+        The game integrates <strong>Google's User Messaging Platform (UMP) SDK</strong>:
+      </p>
+      <ul>
+        <li><strong>EEA, UK, and Switzerland:</strong> A Google-certified IAB TCF v2 consent prompt is shown before personalized ads are requested or device identifiers are accessed for advertising.</li>
+        <li><strong>Supported US States:</strong> Where US state privacy regulations apply, opt-out options for targeted advertising / sharing (via IAB GPP / Restricted Data Processing) are supported.</li>
+        <li><strong>Updating Your Choice:</strong> In regulated regions, you can review or withdraw consent anytime via in-game <em>Settings &gt; Ad privacy choices</em>.</li>
+        <li><strong>Device &amp; Google Account Controls:</strong> Worldwide, you can reset or delete your Android Advertising ID in Android <em>Settings &gt; Google &gt; Ads</em>, or disable ad personalization in
+          <a href="https://myadcenter.google.com/" rel="noopener noreferrer" target="_blank">Google My Ad Center</a>.</li>
+      </ul>
+
+      <h2>5. Legal Bases for Processing</h2>
+      <p>
+        Where required under applicable privacy laws (such as EU/UK GDPR Art. 6, Germany TDDDG § 25, Turkey KVKK Art. 5,
+        and Brazil LGPD Art. 7), personal data is processed on the following legal bases:
+      </p>
+      <ul>
+        <li><strong>Consent (GDPR Art. 6(1)(a), Germany TDDDG § 25(1), KVKK Art. 5/1, LGPD Art. 7-I):</strong> Personalized advertising and accessing/storing device identifiers (such as AAID) for advertising where prior consent is required.</li>
+        <li><strong>Performance of a Contract (GDPR Art. 6(1)(b), KVKK Art. 5/2-c, LGPD Art. 7-V):</strong> Delivering core game features, fulfilling and restoring in-app purchases, and connecting optional Google Play Games sign-in when requested.</li>
+        <li><strong>Legitimate Interests (GDPR Art. 6(1)(f), KVKK Art. 5/2-f, LGPD Art. 7-IX):</strong> Serving non-personalized/contextual ads where lawful, ad frequency capping, fraud/invalid-traffic prevention, security, and SDK diagnostics.</li>
+        <li><strong>Legal Obligation (GDPR Art. 6(1)(c), KVKK Art. 5/2-ç):</strong> Complying with applicable consumer, tax, or lawful regulatory obligations.</li>
+      </ul>
+
+      <h2>6. International Data Transfers</h2>
+      <p>
+        GONI STUDIO is based in Turkey and does not host remote player servers. However, the integrated Google services
+        (Google AdMob, Google Play Games Services, and Google Play Billing) may transfer and process the data listed in
+        Section 3 across borders — including to the <strong>United States, the European Union/EEA, Singapore</strong>,
+        and other jurisdictions where Google operates data centers — using encrypted HTTPS/TLS connections.
+      </p>
+      <p>
+        These international transfers rely on recognized legal safeguards provided by Google, including the EU-US,
+        UK-US, and Swiss-US Data Privacy Frameworks (DPF), Standard Contractual Clauses (EU SCCs, UK IDTA/Addendum,
+        Brazil ANPD SCCs), and appropriate safeguards under amended Article 9(4) of Turkey's KVKK. Data processed in
+        other countries may be subject to lawful access requests by courts or authorities in those jurisdictions.
       </p>
 
-      <h2>6. Data Retention, Deletion, and Your Rights</h2>
+      <h2>7. Data Retention, Security, and Deletion</h2>
       <p>
-        Because we do not store player accounts or personal data on our own servers, we hold no external server records
-        to delete. You can erase local save data by uninstalling the app, and you can manage data processed by Google
-        (Play Games, AdMob, and Google Play) through your Google Account controls.
+        All network communications with integrated Google services are encrypted in transit via HTTPS/TLS. Because GONI
+        STUDIO does not maintain external player accounts or server-side player records:
       </p>
+      <ul>
+        <li><strong>Local game data:</strong> Stored only on your device until you uninstall the game or clear app storage in Android settings (and, if enabled, in your personal Android Auto Backup).</li>
+        <li><strong>Support emails:</strong> Correspondence sent to our contact email is kept only as long as needed to address your request or satisfy legal obligations, and is deleted upon request or expiry.</li>
+        <li><strong>Google-processed data:</strong> Retention periods for AdMob, Play Games, and Play Billing data are governed by Google's privacy policies and can be managed through your Google Account and Android privacy settings.</li>
+      </ul>
+
+      <h2>8. Children's Privacy and Regional Age Thresholds</h2>
       <p>
-        Depending on your jurisdiction (including GDPR and Turkey's KVKK), you may exercise rights regarding access,
-        deletion, or objection by contacting us directly.
+        Graviton Pulse is intended for a general audience (13+) and is <strong>not directed at children</strong>. We do
+        not knowingly collect personal data or serve behavioral advertising to children below the applicable legal
+        minimum age without required parental or guardian consent:
+      </p>
+      <ul>
+        <li><strong>United States (COPPA):</strong> Under age 13.</li>
+        <li><strong>EU / EEA (GDPR Art. 8):</strong> Ages <strong>13 to 16</strong> depending on Member State law (e.g., 16 in Germany and the Netherlands; 15 in France; 14 in Italy and Spain; 13 in Poland, Sweden, and Denmark).</li>
+        <li><strong>United Kingdom:</strong> Under age 13 (while respecting age-appropriate privacy principles for under-18s).</li>
+        <li><strong>South Korea &amp; Canada (Quebec):</strong> Under age 14.</li>
+        <li><strong>Turkey &amp; Brazil:</strong> We respect applicable youth-protection rules, including Turkey's Law No. 5651/7578 (age ratings and 15–18 protections) and Brazil's Digital ECA (Law No. 15.211/2025 for minors under 16).</li>
+        <li><strong>India (DPDP Act):</strong> Anyone under age 18 is defined as a child; we do not knowingly target behavioral advertising to individuals under 18 in India without verifiable parental consent.</li>
+      </ul>
+      <p>
+        If you are a parent or guardian and believe a child below the applicable legal age has provided personal
+        information through the app, please contact us immediately at
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a> so we can promptly review
+        and assist.
       </p>
 
-      <h2>7. Contact and Updates</h2>
+      <h2>9. Country and Region-Specific Privacy Rights</h2>
+
+      <h3>9.1 Turkey (KVKK — Law No. 6698)</h3>
       <p>
-        If we revise this privacy policy, the updated text and effective date will be published at this URL.
-        For any privacy questions or requests, contact GONI STUDIO at
-        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>.
+        Under Article 11 of Turkey's Personal Data Protection Law (KVKK), you have the right to learn whether your
+        personal data is processed, request information about processing and its purposes, know third parties to whom
+        data is transferred domestically or abroad, request rectification or deletion/destruction under Article 7,
+        object to adverse results produced exclusively through automated analysis, and claim compensation for unlawful
+        processing. Submit requests to <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>;
+        we respond free of charge within <strong>30 days</strong>. You also have the right to lodge a complaint with
+        the Turkish Personal Data Protection Authority (KVKK).
+      </p>
+
+      <h3>9.2 European Economic Area (EEA), United Kingdom, and Switzerland (GDPR, UK GDPR, DUAA 2025, Germany TDDDG § 25, revFADP)</h3>
+      <p>
+        Residents of the EEA, UK, and Switzerland have the right to access, rectify, erase ("right to be forgotten"),
+        restrict processing, receive data portability, object to processing based on legitimate interests, and withdraw
+        consent at any time without affecting prior lawful processing. We do not conduct solely automated
+        decision-making that produces legal or similarly significant effects. For users in Germany, accessing or
+        storing device identifiers for advertising is governed separately by <strong>§ 25 TDDDG</strong> and requires
+        prior consent. You have the right to lodge a complaint with your local data protection authority (your EU/German
+        supervisory authority, the UK <strong>ICO</strong>, or the Swiss <strong>FDPIC</strong>).
+      </p>
+
+      <h3>9.3 United States (California CCPA/CPRA &amp; Other US State Privacy Laws)</h3>
+      <p>
+        This section applies to residents of California (CCPA/CPRA), Virginia (VCDPA), Colorado (CPA), Connecticut
+        (CTDPA), Utah (UCPA), Texas (TDPSA), Oregon (OCPA), Montana, Florida, Delaware, Iowa, Nebraska, New Hampshire,
+        New Jersey, Tennessee, Minnesota, Maryland, Indiana, Kentucky, Rhode Island, and other US states with
+        comprehensive consumer privacy statutes:
+      </p>
+      <ul>
+        <li><strong>Categories processed in the past 12 months (via Google SDKs):</strong> Identifiers (Advertising ID, App Set ID, IP address), Internet or other electronic network activity (ad impressions/clicks, SDK diagnostics), Geolocation data (approximate IP-derived region), and Commercial information (in-app purchase records processed by Google Play). We do not collect Sensitive Personal Information.</li>
+        <li><strong>No Sale for Money / "Sharing" &amp; Targeted Advertising Opt-Out:</strong> We do not sell personal information for monetary payment. However, serving personalized ads through Google AdMob may be considered "sharing" or "targeted advertising" under state laws. You may opt out via in-game <em>Ad privacy choices</em> (where available), by deleting/opting out of your Android Advertising ID in device settings, or by emailing us.</li>
+        <li><strong>Your State Privacy Rights:</strong> Right to know/access, right to delete, right to correct inaccuracies, right to data portability, right to opt out of targeted advertising/sale/sharing, right to non-discrimination for exercising your rights, right to use an authorized agent, and right to appeal if a privacy request is denied. Under CalOPPA, our mobile game does not respond to browser "Do Not Track" headers, but honors Android OS ad-privacy controls and UMP/GPP privacy signals.</li>
+      </ul>
+
+      <h3>9.4 Brazil (LGPD — Law No. 13.709/2018 &amp; ANPD Resolution No. 19/2024)</h3>
+      <p>
+        Under Article 18 of Brazil's LGPD, you have the right to confirm the existence of processing, access your data,
+        correct incomplete or inaccurate data, request anonymization, blocking, or deletion of unnecessary data,
+        request portability, obtain information about entities with which data is shared, be informed about the
+        consequences of withholding consent, and revoke consent. Cross-border transfers comply with ANPD Resolution
+        No. 19/2024 safeguards. You may also petition Brazil's National Data Protection Authority (<strong>ANPD</strong>).
+      </p>
+
+      <h3>9.5 Canada (PIPEDA &amp; Quebec Law 25)</h3>
+      <p>
+        Canadian and Quebec residents have the right to access, rectify, withdraw consent, and (where applicable under
+        Quebec Law 25) request data portability or de-indexation. Under Quebec Law 25:
+      </p>
+      <ul>
+        <li><strong>Privacy Officer:</strong> GONI STUDIO —
+          <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a></li>
+        <li><strong>Identification &amp; Profiling Technology Notice:</strong> The game includes Google AdMob, which may use device identifiers for ad delivery and personalization; you can deactivate personalized ads or delete your Advertising ID at any time as described in Section 4.</li>
+        <li>Data transmitted through Google SDKs may be processed outside Quebec and Canada (including the US). You may contact the Office of the Privacy Commissioner of Canada (<strong>OPC</strong>) or Quebec's <strong>CAI</strong>.</li>
+      </ul>
+
+      <h3>9.6 South Korea (PIPA)</h3>
+      <p>
+        In accordance with Article 28-8 of South Korea's Personal Information Protection Act (PIPA), mandatory details
+        regarding overseas data transfers (transferred items, destination countries, transferee Google LLC, timing and
+        method of transfer, purpose, and retention period) are disclosed in <strong>Section 3 and Section 6</strong>.
+        You may refuse overseas ad-data transfer by resetting/deleting your Advertising ID, turning off ad
+        personalization, disconnecting Play Games, or uninstalling the app (refusing AdMob data transfer may limit
+        ad-supported features). To exercise rights of access, correction, deletion, or suspension of processing under
+        PIPA, contact our Privacy Manager at <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>
+        or contact <strong>PIPC / KISA</strong>.
+      </p>
+
+      <h3>9.7 Japan (APPI &amp; Telecommunications Business Act Art. 27-12)</h3>
+      <p>
+        In accordance with Article 27-12 of Japan's Telecommunications Business Act (External Transmission Rule), the
+        table in <strong>Section 3</strong> discloses all third-party SDKs (Google AdMob, Google Play Games Services,
+        and Google Play Billing), the specific user data transmitted externally, the receiving entities, and the
+        purposes of use. Under the APPI, including provisions governing Personally Referable Information (such as
+        Advertising IDs), you may contact us to request disclosure, correction, suspension of use, or cessation of
+        third-party provision.
+      </p>
+
+      <h3>9.8 India (DPDP Act 2023 &amp; DPDP Rules)</h3>
+      <p>
+        Data Principals in India have the right to obtain a summary of personal data processed, seek correction and
+        updating, request erasure, withdraw consent, nominate another individual to exercise their rights, and access
+        grievance redressal. Our Grievance Contact is
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>. You also have the right
+        to complain to the Data Protection Board of India (<strong>DPBI</strong>).
+      </p>
+
+      <h3>9.9 Australia and New Zealand</h3>
+      <p>
+        Under Australia's <em>Privacy Act 1988</em> (including APP 8 overseas disclosure notice) and New Zealand's
+        <em>Privacy Act 2020</em>, please note that data processed by integrated Google services may be disclosed to
+        overseas recipients in the United States, the EU, and other countries where Google operates servers. You may
+        request access or correction, or raise a privacy complaint by emailing us; if unresolved, you may contact the
+        <strong>OAIC</strong> (Australia) or the <strong>OPC</strong> (New Zealand).
+      </p>
+
+      <h3>9.10 Other Jurisdictions (Singapore PDPA, Saudi Arabia &amp; UAE PDPL, Indonesia PDP Law, South Africa POPIA, Latin America ARCO Rights, Hong Kong &amp; Taiwan)</h3>
+      <p>
+        We honor equivalent statutory rights to access, correct, delete, object, withdraw consent, and submit privacy
+        complaints for players worldwide, including under Singapore's PDPA, Saudi Arabia's PDPL, the UAE PDPL,
+        Indonesia's PDP Law No. 27/2022, South Africa's POPIA, Hong Kong's PDPO, Taiwan's PDPA, and Latin American ARCO
+        frameworks (such as Mexico and Argentina).
+      </p>
+
+      <h2>10. Changes to This Policy and Contact</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect legal or technical changes. The updated version
+        and effective date will always be published at this URL. For any privacy questions, rights requests, or
+        complaints, contact:
+      </p>
+      <p>
+        <strong>GONI STUDIO</strong> &mdash;
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>
+      </p>
+    </article>
+
+    <!-- ========================= GERMAN ========================= -->
+    <article id="de" lang="de">
+      <h1>Datenschutzerklärung für Graviton Pulse</h1>
+      <p class="updated">Zuletzt aktualisiert und gültig ab: 20. November 2026</p>
+
+      <p>
+        Graviton Pulse ist ein mobiles Spiel, das von <strong>GONI STUDIO</strong>, einem unabhängigen Entwickler mit
+        Sitz in der Türkei, entwickelt und über Google Play bereitgestellt wird (Paketname:
+        <code>com.gravitonpulse.game</code>). Diese Datenschutzerklärung informiert Sie transparent darüber, welche
+        Daten lokal auf Ihrem Gerät gespeichert werden, welche Daten über eingebundene Dienste Dritter verarbeitet
+        werden, auf welchen Rechtsgrundlagen dies beruht und welche Datenschutzrechte Ihnen zustehen.
+      </p>
+
+      <div class="summary-box">
+        <p><strong>Auf einen Blick:</strong></p>
+        <p>&bull; GONI STUDIO betreibt <strong>keine</strong> eigenen Spielserver, Spielerdatenbanken oder Benutzerkonten; Ihre Spielstände bleiben lokal auf Ihrem Gerät.</p>
+        <p>&bull; Das Spiel nutzt <strong>Google AdMob</strong> für Werbung, optional <strong>Google Play Spiele</strong> zur Anmeldung und <strong>Google Play Billing</strong> für optionale In-App-Käufe.</p>
+        <p>&bull; Wir verkaufen keine personenbezogenen Daten gegen Geld und erheben keine genauen GPS-Standortdaten, Kamera-, Mikrofon-, Kontakt- oder Chatdaten sowie keine Drittanbieter-Analyse-SDKs.</p>
+      </div>
+
+      <h2>1. Verantwortlicher und Kontakt</h2>
+      <ul>
+        <li><strong>Verantwortlicher / Entwickler:</strong> GONI STUDIO (Türkei)</li>
+        <li><strong>Datenschutzkontakt:</strong>
+          <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a></li>
+        <li><strong>Website:</strong>
+          <a href="https://aladag-seyit-mehmet.github.io/" rel="noopener noreferrer" target="_blank">https://aladag-seyit-mehmet.github.io/</a></li>
+      </ul>
+
+      <h2>2. Lokal gespeicherte Spieldaten und Android Auto Backup</h2>
+      <p>
+        Die folgenden Spieldaten werden ausschließlich lokal im privaten App-Speicher Ihres Geräts (AsyncStorage)
+        gespeichert und nicht an Server von GONI STUDIO übertragen:
+      </p>
+      <ul>
+        <li>Kapitelfortschritt, Sterne, Highscores und Endlosmodus-Rekorde,</li>
+        <li>Pilotenlevel, Erfahrungspunkte (XP), Titel, tägliche Missionen, 7-Tage-Login-Serie, Erfolge und Tutorial-Status,</li>
+        <li>Freigeschaltete Raketen, Spuren, Upgrades und Spielguthaben (Sternenstaub, Edelsteine sowie Status „Werbung entfernen“),</li>
+        <li>Ton-, Vibrations-, Grafik-, Themen- und Spracheinstellungen (Deutsch, Englisch, Türkisch) sowie tägliche Zähler für Bonus-Videos,</li>
+        <li>Ein lokales Kaufprotokoll (Google-Play-Bestell-ID, Produkt-ID, Kauf-Token, Zeitstempel) ausschließlich zur lokalen Prüfung, Missbrauchsprävention und Wiederherstellung von Käufen.</li>
+      </ul>
+      <p>
+        Wenn auf Ihrem Smartphone <strong>Android Auto Backup</strong> oder die Geräteübertragung aktiviert ist, kann
+        Android diese App-Daten in Ihrem persönlichen Google-Drive-Konto sichern, damit Ihr Fortschritt bei einem
+        Gerätewechsel erhalten bleibt. Sie können dies in den Android-Einstellungen deaktivieren. Durch Deinstallieren
+        der App oder Löschen der App-Daten in den Android-Einstellungen werden alle lokalen Daten auf dem Gerät
+        entfernt.
+      </p>
+
+      <h2>3. Eingebundene Dienste Dritter (SDKs) und externe Datenübermittlung</h2>
+      <p>
+        Graviton Pulse nutzt ausschließlich die nachfolgenden offiziellen Google-Dienste. Es werden <strong>keine</strong>
+        Drittanbieter-Analyse-SDKs (wie Firebase Analytics), Social-Media-Tracker, Push-Benachrichtigungen oder
+        Chat-Funktionen eingesetzt.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dienst / SDK</th>
+              <th>Empfänger &amp; Region</th>
+              <th>Verarbeitete / übermittelte Daten</th>
+              <th>Zweck &amp; Übermittlungsweg</th>
+              <th>Speicherdauer &amp; Hinweise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google AdMob</strong><br>(Google Mobile Ads SDK &amp; Google UMP SDK)</td>
+              <td>Google LLC (USA), Google Ireland Ltd. (Irland) und Google-Werbetechnologiepartner</td>
+              <td>Android-Werbe-ID (AAID), App-Set-ID, IP-Adresse (zur groben Länder-/Regionsermittlung), Gerätemodell/OS/Bildschirm/Sprache/App-Version, Werbeeinblendungen und -klicks, SDK-Diagnose-/Absturzdaten sowie Android Privacy Sandbox Signale (Topics / Attribution), sofern von Android unterstützt.</td>
+              <td>Auslieferung optionaler Bonus-Videos und begrenzter Zwischenwerbung, Häufigkeitsbegrenzung, Erfolgsmessung, Betrugsprävention und Einwilligungsverwaltung. Verschlüsselte Übertragung via HTTPS/TLS bei App-Nutzung und Werbeladevorgängen.</td>
+              <td>Gemäß Google-Richtlinien.<br>
+                <a href="https://policies.google.com/privacy?hl=de" rel="noopener noreferrer" target="_blank">Google-Datenschutz</a> &bull;
+                <a href="https://policies.google.com/technologies/partner-sites?hl=de" rel="noopener noreferrer" target="_blank">Google-Partnerdienste</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Play Spiele</strong><br>(Play Games Services v2)</td>
+              <td>Google LLC (USA) und Google Ireland Ltd. (Irland)</td>
+              <td>Anmeldestatus und Spieler-Anzeigename. Die App liest diese Angaben nur lokal auf dem Gerät aus, um den Verbindungsstatus in den Einstellungen anzuzeigen, und überträgt sie nicht an eigene Server.</td>
+              <td>Optionale Spieleranmeldung; zum Spielen nicht erforderlich. Verarbeitung über verschlüsseltes HTTPS/TLS bei automatischer oder manueller Anmeldung.</td>
+              <td>Jederzeit in der Play-Spiele-App oder im Google-Konto trennbar.<br>
+                <a href="https://policies.google.com/privacy?hl=de" rel="noopener noreferrer" target="_blank">Google-Datenschutz</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Play Billing</strong><br>(In-App-Käufe über expo-iap)</td>
+              <td>Google LLC (USA) und Google Ireland Ltd. (Irland)</td>
+              <td>Produkt-ID, Google-Play-Bestell-ID, Kaufstatus/-Token und Zeitstempel. Zahlungs- und Kartendaten werden ausschließlich von Google Play verarbeitet und sind für GONI STUDIO nicht einsehbar.</td>
+              <td>Bereitstellung fester virtueller Währungspakete (Sternenstaub, Edelsteine) und der dauerhaften Option „Werbung entfernen“, Betrugsschutz und Kaufwiederherstellung. (Keine Lootboxen oder Zufallskäufe.)</td>
+              <td>Gemäß Google-Play-Transaktionsdaten und lokalem Gerätespeicher.<br>
+                <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice&ldl=de" rel="noopener noreferrer" target="_blank">Google Payments Datenschutz</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Werbeeinstellungen, Einwilligung (CMP) und Geräteoptionen</h2>
+      <p>
+        Graviton Pulse ist kostenlos spielbar und zeigt optionale Bonus-Videos (Wiederbelebung, 2× Sternenstaub,
+        kostenloser Sternenstaub) sowie begrenzte Zwischenwerbung zwischen einzelnen Läufen. Der Kauf von „Werbung
+        entfernen“ schaltet Zwischenwerbung dauerhaft ab; freiwillige Bonus-Videos bleiben optional verfügbar.
+      </p>
+      <ul>
+        <li><strong>EWR, Vereinigtes Königreich und Schweiz:</strong> Vor dem Abruf personalisierter Werbung bzw. dem Zugriff auf Gerätekennungen zu Werbezwecken zeigt das integrierte, Google-zertifizierte <strong>User Messaging Platform (UMP) SDK</strong> (IAB TCF v2) einen Einwilligungsdialog an.</li>
+        <li><strong>Einwilligung jederzeit ändern oder widerrufen:</strong> Öffnen Sie im Spiel <em>Einstellungen &gt; Werbe-Datenschutzoptionen</em> (in entsprechenden Regionen).</li>
+        <li><strong>Android- &amp; Google-Kontoeinstellungen:</strong> Sie können Ihre Android-Werbe-ID jederzeit unter Android <em>Einstellungen &gt; Google &gt; Werbung</em> zurücksetzen oder löschen sowie personalisierte Werbung im
+          <a href="https://myadcenter.google.com/" rel="noopener noreferrer" target="_blank">Google-Anzeigencenter</a>
+          deaktivieren.</li>
+      </ul>
+
+      <h2>5. Rechtsgrundlagen der Verarbeitung (DSGVO &amp; TDDDG)</h2>
+      <ul>
+        <li><strong>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO sowie § 25 Abs. 1 TDDDG für Deutschland):</strong> Speichern oder Auslesen von Informationen auf Ihrem Endgerät (z. B. Werbe-ID) und Verarbeitung personenbezogener Daten für personalisierte Werbung, soweit gesetzlich eine Einwilligung erforderlich ist.</li>
+        <li><strong>Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO; § 25 Abs. 2 Nr. 2 TDDDG für unbedingt erforderliche lokale Spielstände):</strong> Bereitstellung der Spielfunktionen, Abwicklung und Wiederherstellung von In-App-Käufen sowie optionale Google-Play-Spiele-Anmeldung auf Ihren Wunsch.</li>
+        <li><strong>Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO):</strong> Auslieferung nicht-personalisierter/kontextbezogener Werbung (soweit rechtlich zulässig), Häufigkeitsbegrenzung, Betrugs- und Missbrauchsprävention, Sicherheit und technische Fehlerdiagnose.</li>
+        <li><strong>Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO):</strong> Erfüllung anwendbarer verbraucherschutz-, steuer- oder aufsichtsrechtlicher Pflichten.</li>
+      </ul>
+
+      <h2>6. Internationale Datenübermittlungen</h2>
+      <p>
+        GONI STUDIO hat seinen Sitz in der Türkei und speichert keine Spielerdaten auf eigenen Servern. Die
+        eingebundenen Google-Dienste (AdMob, Play Spiele, Play Billing) können die in Abschnitt 3 genannten Daten
+        verschlüsselt (HTTPS/TLS) in Drittländer außerhalb des EWR übermitteln — insbesondere in die
+        <strong>USA, nach Singapur</strong> und an weitere Google-Rechenzentrumsstandorte.
+      </p>
+      <p>
+        Diese Übermittlungen stützen sich auf geeignete Garantien gemäß Art. 44 ff. DSGVO, insbesondere das
+        EU-US / UK-US / Swiss-US Data Privacy Framework (DPF) sowie EU-Standardvertragsklauseln (SCC) und
+        vergleichbare gesetzliche Schutzmechanismen (u. a. nach türkischem KVKK Art. 9 und brasilianischer ANPD-Richtlinie).
+      </p>
+
+      <h2>7. Speicherdauer, Sicherheit und Löschung</h2>
+      <p>
+        Sämtliche Netzwerkübertragungen erfolgen verschlüsselt über HTTPS/TLS. Da GONI STUDIO keine Benutzerkonten oder
+        Server-Datenbanken betreibt, verbleiben Spielstände ausschließlich lokal auf Ihrem Gerät, bis Sie die App
+        deinstallieren oder deren Speicher löschen. Support-E-Mails an
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a> werden nur so lange
+        aufbewahrt, wie dies zur Bearbeitung Ihres Anliegens oder aufgrund gesetzlicher Pflichten erforderlich ist.
+        Für von Google verarbeitete Daten gelten die Speicherfristen von Google.
+      </p>
+
+      <h2>8. Schutz von Kindern und länderspezifische Altersgrenzen</h2>
+      <p>
+        Graviton Pulse richtet sich an ein allgemeines Publikum (ab 13 Jahren) und <strong>nicht an Kinder</strong>.
+        Wir erheben wissentlich keine personenbezogenen Daten von Kindern unterhalb der jeweiligen gesetzlichen
+        Altersgrenze ohne erforderliche Zustimmung der Erziehungsberechtigten:
+      </p>
+      <ul>
+        <li><strong>Deutschland und EWR (Art. 8 DSGVO):</strong> Je nach Mitgliedstaat zwischen <strong>13 und 16 Jahren</strong> (in Deutschland, den Niederlanden und Irland: <strong>16 Jahre</strong>; in Frankreich: 15 Jahre; in Österreich, Italien und Spanien: 14 Jahre).</li>
+        <li><strong>USA (COPPA) &amp; Vereinigtes Königreich:</strong> Unter 13 Jahren.</li>
+        <li><strong>Südkorea &amp; Kanada (Québec):</strong> Unter 14 Jahren.</li>
+        <li><strong>Türkei &amp; Brasilien:</strong> Geltende Jugendschutzvorschriften (u. a. türkisches Gesetz Nr. 5651/7578 und brasilianisches Gesetz Nr. 15.211/2025).</li>
+        <li><strong>Indien (DPDP Act):</strong> Personen unter 18 Jahren gelten als Kinder; es erfolgt wissentlich keine zielgerichtete verhaltensbasierte Werbung an unter 18-Jährige in Indien ohne verifizierbare elterliche Einwilligung.</li>
+      </ul>
+      <p>
+        Sollten Sie als Erziehungsberechtigter annehmen, dass ein Kind personenbezogene Daten übermittelt hat, wenden
+        Sie sich bitte umgehend an <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>.
+      </p>
+
+      <h2>9. Ihre Datenschutzrechte nach Region</h2>
+
+      <h3>9.1 Deutschland, EWR, Vereinigtes Königreich und Schweiz (DSGVO, TDDDG, UK GDPR / DUAA 2025, revDSG)</h3>
+      <p>
+        Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung
+        der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20), Widerspruch gegen Verarbeitungen auf Grundlage
+        berechtigter Interessen (Art. 21) sowie das Recht, eine erteilte Einwilligung jederzeit mit Wirkung für die
+        Zukunft zu widerrufen (Art. 7 Abs. 3 DSGVO). Eine ausschließlich automatisierte Entscheidungsfindung mit
+        rechtlicher oder ähnlich erheblicher Wirkung findet nicht statt. Zudem besteht ein Beschwerderecht bei der
+        zuständigen Datenschutzaufsichtsbehörde (z. B. Ihrem Landesdatenschutzbeauftragten in Deutschland, der
+        britischen <strong>ICO</strong> oder dem schweizerischen <strong>EDÖB</strong>).
+      </p>
+
+      <h3>9.2 Türkei (KVKK — Gesetz Nr. 6698)</h3>
+      <p>
+        Betroffene in der Türkei haben sämtliche Rechte nach Art. 11 KVKK (Auskunft, Berichtigung, Löschung/Vernichtung,
+        Widerspruch und Beschwerde bei der türkischen Datenschutzbehörde KVKK). Anfragen per E-Mail werden innerhalb
+        von maximal 30 Tagen kostenlos beantwortet.
+      </p>
+
+      <h3>9.3 USA (Kalifornien CCPA/CPRA und weitere US-Bundesstaaten)</h3>
+      <p>
+        Einwohner von Kalifornien sowie weiterer US-Bundesstaaten mit umfassenden Datenschutzgesetzen (u. a. Virginia,
+        Colorado, Connecticut, Utah, Texas, Oregon, Montana, Florida, Delaware, Iowa, Nebraska, New Hampshire, New
+        Jersey, Tennessee, Minnesota, Maryland, Indiana, Kentucky, Rhode Island) haben Rechte auf Auskunft, Löschung,
+        Berichtigung, Datenübertragbarkeit, Widerspruch („Opt-out“) gegen personalisierte Werbung / „Sharing“,
+        Nichtdiskriminierung und Beschwerde gegen abgelehnte Anträge. Wir verkaufen keine personenbezogenen Daten
+        gegen Entgelt.
+      </p>
+
+      <h3>9.4 Weitere Länder (Brasilien LGPD, Kanada PIPEDA / Québec Gesetz 25, Südkorea PIPA, Japan APPI / TBA, Indien DPDP, Australien / Neuseeland u. a.)</h3>
+      <p>
+        Wir respektieren die jeweiligen gesetzlichen Datenschutzrechte von Spielern weltweit — einschließlich der
+        Rechte nach brasilianischem LGPD (Art. 18 &amp; ANPD-Richtlinie 19/2024), kanadischem PIPEDA und Québec
+        Gesetz 25 (Datenschutzbeauftragter / Privacy Officer: GONI STUDIO,
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>), südkoreanischem PIPA
+        (Auslandsübermittlungsangaben in Abschnitt 3 &amp; 6), japanischem APPI und Telekommunikationsgesetz Art. 27-12
+        (externe Übermittlungstabelle in Abschnitt 3), indischem DPDP Act 2023 (Beschwerdekontakt per E-Mail),
+        australischem Privacy Act 1988 (APPs), neuseeländischem Privacy Act 2020 sowie Singapur PDPA, Saudi-Arabien
+        und VAE PDPL, Indonesien PDP, Südafrika POPIA und lateinamerikanischen ARCO-Rechten.
+      </p>
+
+      <h2>10. Änderungen dieser Datenschutzerklärung und Kontakt</h2>
+      <p>
+        Wir behalten uns vor, diese Datenschutzerklärung bei rechtlichen oder technischen Änderungen zu aktualisieren.
+        Die jeweils aktuelle Fassung wird stets unter dieser URL veröffentlicht. Bei Fragen oder Datenschutzanfragen
+        kontaktieren Sie bitte:
+      </p>
+      <p>
+        <strong>GONI STUDIO</strong> &mdash;
+        <a href="mailto:seyit.mehmet.aladag42@gmail.com">seyit.mehmet.aladag42@gmail.com</a>
       </p>
     </article>
   </main>
@@ -330,29 +1021,44 @@
 
   <script>
     (function () {
-      var trArticle = document.getElementById('tr');
-      var enArticle = document.getElementById('en');
-      var btnTr = document.getElementById('btn-tr');
-      var btnEn = document.getElementById('btn-en');
-      if (!trArticle || !enArticle || !btnTr || !btnEn) return;
+      var articles = {
+        tr: document.getElementById('tr'),
+        en: document.getElementById('en'),
+        de: document.getElementById('de')
+      };
+      var buttons = {
+        tr: document.getElementById('btn-tr'),
+        en: document.getElementById('btn-en'),
+        de: document.getElementById('btn-de')
+      };
+      if (!articles.tr || !articles.en || !articles.de) return;
 
       document.documentElement.classList.add('js-tabs');
 
       function applyLang(lang) {
-        var showEn = lang === 'en';
-        trArticle.setAttribute('data-hidden', showEn ? 'true' : 'false');
-        enArticle.setAttribute('data-hidden', showEn ? 'false' : 'true');
-        btnTr.className = showEn ? '' : 'active';
-        btnEn.className = showEn ? 'active' : '';
-        document.documentElement.lang = showEn ? 'en' : 'tr';
+        var active = articles[lang] ? lang : 'en';
+        var keys = ['tr', 'en', 'de'];
+        for (var i = 0; i < keys.length; i++) {
+          var k = keys[i];
+          var isCurrent = k === active;
+          articles[k].setAttribute('data-hidden', isCurrent ? 'false' : 'true');
+          if (buttons[k]) {
+            buttons[k].className = isCurrent ? 'active' : '';
+            buttons[k].setAttribute('aria-current', isCurrent ? 'page' : 'false');
+          }
+        }
+        document.documentElement.lang = active;
       }
 
       function detectLang() {
         var h = (window.location.hash || '').toLowerCase();
-        if (h === '#en') return 'en';
         if (h === '#tr') return 'tr';
+        if (h === '#en') return 'en';
+        if (h === '#de') return 'de';
         var nav = (navigator.language || '').toLowerCase();
-        return nav.indexOf('tr') === 0 ? 'tr' : 'en';
+        if (nav.indexOf('tr') === 0) return 'tr';
+        if (nav.indexOf('de') === 0) return 'de';
+        return 'en';
       }
 
       window.addEventListener('hashchange', function () {
